@@ -27,8 +27,3 @@ def get_service_url(request, redirect_to=None):
         (protocol, host, request.path, "", "", ""))
 
     return service
-
-def get_logout_url(request):
-    service_url = get_service_url(request)
-    client = get_cas_client(service_url)
-    return client.get_logout_url()
