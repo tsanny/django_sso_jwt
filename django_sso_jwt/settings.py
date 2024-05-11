@@ -25,11 +25,21 @@ SECRET_KEY = 'django-insecure-je@qtl!ux+r+4@byd6$abq6c3qv+=+u=%oos3!ha@-vdrl207b
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
+"""
+Add the following apps to the INSTALLED_APPS list:
+- 'sso_auth' for SSO authentication
+- 'django_cas_ng' for CAS authentication
+- 'rest_framework_simplejwt' for JWT authentication
 
+Tambahkan app berikut ke dalam list INSTALLED_APPS:
+- 'sso_auth' untuk autentikasi SSO
+- 'django_cas_ng' untuk autentikasi CAS
+- 'rest_framework_simplejwt' untuk autentikasi JWT
+"""
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -37,9 +47,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'sso_auth',
-    'django_cas_ng',
-    'rest_framework_simplejwt',
+    'sso_auth', # App for SSO authentication
+    'django_cas_ng', # App for CAS authentication
+    'rest_framework_simplejwt', # App for JWT authentication
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

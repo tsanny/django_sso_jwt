@@ -1,1 +1,6 @@
 .env
+env/
+new_env/
+another_env/
+
+__pycache__/
